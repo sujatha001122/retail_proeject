@@ -1,0 +1,95 @@
+<div class="flex flex-wrap">
+    <div class="card-1">
+        <p-card>
+           
+            <h1>Filtering</h1>
+            <div class="filter-filters">
+                <span class="categorie-filter">
+                    Categoires
+                </span>
+                <select [(ngModel)]= "ProductSelected" (ngModelChange)='onProductSelected($event)'>
+                    <option *ngFor= "let prod of product" [value]= "prod.id">
+                        {{prod.brands}}
+                    </option>
+                </select>
+                <!-- <ul [(ngModel)]= "ProductSelected"> 
+                    <li *ngFor= "let prod of product" id="check" [value]= "prod.id" [style]="{'list-style-type':'none'}">
+                        <input type="checkbox" for="check">{{prod.brands}}
+                    </li>
+                </ul> -->
+                <!-- <pre>{{this.result | json}}</pre> -->
+            </div>
+            <!-- <div class="filter-filters">
+                <span>
+                  Brand
+                </span>
+                <div>
+                    <input type="text" class="filter-searchBox filter-search-inputbox" placeholder="Search For Brand">
+                </div>
+            </div>
+            <div class="filter-filters">
+                <span class="categorie-filter">Price</span>
+            </div>
+            <div class="filter-filters">
+                <span class="categorie-filter">Color
+                </span>
+            </div>  -->
+        </p-card>
+    </div>
+    <div class="card-2" >
+        <p-card >
+        <p-dataView #dv [value]="product" [paginator]="true" [rows]="12" filterBy="title" layout="grid"
+                    [sortField]="sortField" [sortOrder]="sortOrder" class="dataview" [style]="{'position':'unset'}"  >
+
+                    <ng-template pTemplate="header">
+                        <div class="flex flex-column md:flex-row md:justify-content-between">
+                            <p-dropdown placeholder="sort by price" [options] = "sortOptions" (onChange) = "onSortChange($event)"></p-dropdown>
+                            <span class="p-input-icon-left mb-2 md:mb-0">
+                                <i class="pi pi-search"></i>
+                                <input type="search" pInputText placeholder="Search by Name"(input)="dv.filter($any($event.target).value)" >
+                            </span>
+                        </div>
+                      
+                    </ng-template>
+                    <ng-template let-product pTemplate="gridItem">
+                        <div class="col-12 md:col-4" (click)="addItem(product)">
+                            <div class="product-grid-item card" class="data">
+                                <div class="product-grid-item-top">
+                                    <div>
+                                        <i class="pi pi-tag product-category-icon"></i>
+                                        <span class="product-category">{{product.title}}</span>
+                                    </div>
+                                
+                                    <div>
+                                        <a routerLink="/bag/{{product.id}}">
+                                        <img class="top" [src]="product.images[0].uri" alt="product.brands">
+                                        </a>
+                                    </div>
+
+                                    <!-- <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span> -->
+                                </div>
+                                <div class="product-grid-item-content">
+                                    <div class="product-name">{{product.brands}}</div>
+                                    <!-- <div class="product-description">{{product.description}}</div> -->
+                                    <!-- <p-rating [ngModel]="product.rating" ></p-rating> -->
+                                </div>
+                                <div class="product-grid-item-bottom">
+                                    <span class="product-price">${{product.priceInfo.price}}</span>
+                                    <!-- <p-button icon="pi pi-shopping-cart" [disabled]="product.inventoryStatus === 'OUTOFSTOCK'"></p-button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </p-dataView>
+            </p-card>
+            </div>
+    </div>
+
+
+
+
+
+
+
+
+       

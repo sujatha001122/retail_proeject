@@ -1,0 +1,118 @@
+
+<!-- <p-megaMenu [model]="items"> 
+  <div class="bar" >
+ 
+    <input type="text" pInputText placeholder="Search for Product, Brand" class="searchBar"> 
+    <a [routerLink]="['../login']"  class="tab"><i class="pi pi-user "></i> Login</a>
+    <a [routerLink]="['../addtocart']" class="tab"><i class="pi pi-shopping-cart"> </i> Add to Cart</a>
+    <a [routerLink]="['../bag']" class="tab"><i class="pi pi-shopping-bag"> </i> Wish List</a>
+   
+</div>
+</p-megaMenu> -->
+
+   <!-- <i class="pi pi-search"></i> -->
+ <!-- <label class="tab"><i class="pi pi-user "></i>Login</label>  -->
+    <!-- <label  class="tab"><i class="pi pi-shopping-cart"> </i>Add to Cart</label> -->
+    <!-- <label  class="tab"><i class="pi pi-shopping-bag"> </i> Bag</label> -->  
+
+  <p-card class="head">
+<ol>
+  <li *ngFor="let listprod of listData">{{productservice.listData}}</li>
+</ol>
+<!-- <ol>
+  <li>
+    <tbody>
+      <tr *ngFor="let person of listData; let i=index">
+        <td><{{productservice.listData}}</a></td>
+        <td>{{person.phone}}</td>
+        <td>{{person.address.street}}<br/>
+          {{person.address.city}}, {{person.address.state}} {{person.address.zip}}
+        </td>
+      </tr> 
+      </tbody>
+  </li>
+</ol> -->
+      <h1>Top Brands</h1>
+    <ul class="topbrandlist" role="list">
+      <div class="container-brand">
+      <li class="listitem">
+        <span>
+          <a [routerLink]="['../louis']" >
+          <div class="div1">
+            <div class="div2">
+              <img alt="louis vuitton" src="https://cdn.shopify.com/s/files/1/0752/6435/products/DSC_0622_900x.jpg?v=1663778205" class="top">
+            </div>
+            <div>
+              louis vuitton
+            </div>
+          </div>
+        </a>
+        </span>
+      </li>
+      <li class="listitem">
+        <span>
+          <a [routerLink]="['../productsingle']" >
+          <div class="div1">
+            <div class="div2">
+              <img alt="Gucci " src="https://hoodiebazar.com/wp-content/uploads/2022/04/4_14033355-477a-4bd5-9f77-be569c2b825c.jpg" class="top">
+            </div>
+            <div >
+              Gucci 
+            </div>
+          </div>
+          </a>
+        </span>
+      </li>
+      <li class="listitem">
+        <span>
+          <div class="div1">
+            <div class="div2">
+              <img alt="Giorgio Armani" src="https://assets.ajio.com/medias/sys_master/root/20220923/GK8w/632ce0acf997dd1f8d16e8cb/-1117Wx1400H-410325437-fbt0-MODEL.jpg" class="top">
+            </div>
+            <div >
+              Giorgio Armani
+            </div>
+          </div>
+        </span>
+      </li>
+      <li class="listitem">
+        <span>
+          <div class="div1">
+            <div class="div2">
+              <img alt="Roadster" src="https://static.wixstatic.com/media/3cd70c_8abba49f766f4abeb9f07a328328e1aa~mv2.jpg/v1/fill/w_750,h_1001,al_c,q_85,usm_0.66_1.00_0.01/3cd70c_8abba49f766f4abeb9f07a328328e1aa~mv2.webp" class="top">
+            </div>
+            <div >
+              Roadtser
+            </div>
+          </div>
+        </span>
+      </li>
+      <li class="listitem">
+        <span>
+          <div class="div1">
+            <div class="div2">
+              <img alt="H&M" src="https://asset1.cxnmarksandspencer.com/is/image/mands/SD_01_T41_6000W_BB_X_EC_0?$PDP_IMAGEGRID_ZOOM_MD$" class="top">
+            </div>
+            <div >
+              H&M
+            </div>
+          </div>
+        </span>
+      </li>
+      <li class="listitem">
+        <span>
+          <div class="div1">
+            <div class="div2">
+              <img alt="kurtis" src="https://static.cilory.com/606173-thickbox_default/multicolor-printed-flared-cotton-long-kurti.jpg" class="top">
+            </div>
+            <div >
+              kurtis
+            </div>
+          </div>
+        </span>
+      </li>
+      </div>
+    </ul>
+   
+  </p-card>
+

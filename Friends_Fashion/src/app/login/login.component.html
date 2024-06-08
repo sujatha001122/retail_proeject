@@ -1,0 +1,38 @@
+
+<p-card header="Welcome to MA_Fashion" class="card-body" [style]="{'width': '25rem', 'height': '30rem','margin-bottom': '2em','text-align':'center', 'color':'black'}">
+     
+      <div class="login">
+        <div class="p-fluid grid">
+           
+                <div class="field col-12">
+                    <span class="p-float-label">
+                        <input type="text" id="inputtext" pInputText [(ngModel)]="value1"> 
+                        <label for="inputtext">Email</label>
+                    </span>
+                </div>
+            <div class="field col-12 ">
+                <span class="p-float-label">
+                    <p-password inputId="password" [(ngModel)]="value11"></p-password>
+                    <label for="password">Password</label>
+                </span>
+            </div>
+        </div>
+        
+        <button type="button" [routerLink]="['../userdashboard']" label="login" pButton pRipple (click)="OnSubmit()">
+        </button>
+        <p>_______________or_______________</p>
+      <div><i class="pi pi-google"></i> <a href="https://accounts.google.com/signup/v2/webcreateaccount?continue=https%3A%2F%2Fmyaccount.google.com%3Futm_source%3Daccount-marketing-page%26utm_medium%3Dcreate-account-button&flowName=GlifWebSignIn&flowEntry=SignUp"> Sign-in with Google </a></div>
+      </div>
+      <div>
+        <p>New MA-Fashion? <a href="file:///C:/Users/schokkalingam/OneDrive%20-%20Manhattan%20Associates/Documents/sign.html">Create Account</a></p>
+      </div>
+</p-card>
+
+<!-- <h1>Welcome..</h1>
+<form>
+    <p-card>
+        <h1 class="loginTag">Login Form</h1>
+    </p-card>
+</form> -->
+
+

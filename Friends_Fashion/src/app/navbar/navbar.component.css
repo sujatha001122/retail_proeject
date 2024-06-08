@@ -1,0 +1,55 @@
+.tab {
+    /* display: inline-block; */
+    margin-left: 40px;
+    color:azure
+    /* tab-size = 2px; */
+}
+a{
+    text-decoration-line: none;
+}
+:host ::ng-deep .p-megamenu {
+    background-color: rgb(47, 47, 49) !important;
+    position: sticky !important; 
+    width: 100% !important;
+    top:0;
+    /* overflow: hidden;  */
+    
+  
+}
+/* p-megamenu :hover{
+    background-color: transparent;
+} */
+:host ::ng-deep .p-megamenu .p-megamenu-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
+    color:white !important;
+    text-align: center !important;
+}
+
+:host ::ng-deep .bar {
+    color: white;
+    /* background-color: aquamarine; */
+}
+:host ::ng-deep .searchBar {
+    width: 450px !important;
+    height: 30px !important;
+    text-transform:capitalize;
+    padding-left: 10px;
+}
+.tab1{
+    color:white;
+    text-decoration-line: none;
+    padding-right: 20px;
+}
+input{
+    width: 400px;
+    height: 30px;
+    text-transform:capitalize;
+}
+button{
+    height: 35px;
+    width: 100px;
+    padding: 10px 22px;
+    border-radius: 12px;
+    text-align: center;
+    margin-left: 5px;
+    
+}

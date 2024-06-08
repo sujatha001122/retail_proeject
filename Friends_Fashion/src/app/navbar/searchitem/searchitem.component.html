@@ -1,0 +1,41 @@
+<div class="flex flex-wrap">
+    <div class="card-1">
+        <p-card>
+            <ul > 
+                <h2>Filters</h2> 
+                <li *ngFor="let prod of productservice?.listData?.facets" id="check"  [style]="{'list-style-type':'none'}">
+                    <strong>{{prod.key}}</strong>
+                    <div>
+                        <li *ngFor="let check of prod.values">
+                         <input type="checkbox" for="check" (click)="getproductFilter(prod.key,check?.value)"> <label>{{check?.value}}</label>  <strong>({{check?.count}})</strong>
+                    </li> 
+                    </div>  
+                </li>
+            </ul> 
+        </p-card>
+    </div>
+    <div class="card-2" >
+        <p-card>
+            <h1> Your Results </h1>
+            <ng-template let-yourVaraibleName pTemplate="gridItem">
+                <div class="view">
+                 <div *ngFor="let list of productservice?.listData?.results" class="data">
+                    <!-- <p-card class="card"> -->
+                        <div>
+                            <a routerLink="/bag/{{list.id}}">
+                            <img [src]="list.product.images[0]?.uri" alt="-" class="img-fluid">
+                            </a>
+                        </div>
+                    <h4 class="product-title">{{list.product.title}}</h4>
+                    <p class="product-discription">{{list.product.description}}</p>
+
+                <!-- </p-card> -->
+                </div>  
+              
+            </div> 
+       
+        </ng-template> 
+        </p-card>
+    </div>
+</div>
+

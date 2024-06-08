@@ -1,0 +1,16 @@
+<p-megaMenu [model]="items">
+    <div class="bar">
+        <a [routerLink]="['../userdashboard']" class="tab1"> Home  </a>
+        <span class="p-input-icon-left mb-2 md:mb-0">
+            <i class="pi pi-search"></i>
+            <input type="search" [(ngModel)]="searchKey" (ngModelChange)="this.userQuestion.next($event)"  pInputText placeholder="Search by Name, Product, Brand">
+            <a [routerLink]="['/searchitem']">
+                <button type="button" (click)="getproductSearch()">Search</button>
+            </a>
+            
+        </span>
+        <a [routerLink]="['../login']" class="tab"><i class="pi pi-user "></i> Login</a>
+        <a [routerLink]="['../addtocart']" class="tab"><i class="pi pi-shopping-cart"> </i> Add to Cart</a>
+        <a [routerLink]="['../bag']" class="tab"><i class="pi pi-shopping-bag"> </i> Wish List</a>  
+    </div>
+</p-megaMenu>

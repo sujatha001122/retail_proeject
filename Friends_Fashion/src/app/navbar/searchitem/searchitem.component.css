@@ -1,0 +1,45 @@
+.card-1 {
+    padding: 5px;
+    flex:10%;
+}
+.card-2 {
+    padding: 5px;
+    flex:50%;
+}
+.card{
+    padding: 15px;
+    
+}
+h1{
+    color:black;
+    margin-top: -20px;
+}
+img{
+    max-height: 184px;
+    max-width: 224px;
+    margin-left: 2rem;
+    margin-top: 10px;
+    /* border-image-outset:2rem; */
+}
+
+.view {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.data {
+    padding: 5px 5px 10px 5px;
+    width: 280px;
+    height: 350px;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    margin: 2px 2px 10px 2px;
+}
+.p-card .p-card-body{
+    height: 550px;
+    overflow-y:scroll;
+}
+.product-title, .product-discription {
+    text-align: center;
+}

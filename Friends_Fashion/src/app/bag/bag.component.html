@@ -1,0 +1,46 @@
+
+    
+        <!-- <section class="single-product"> -->
+            <!-- <div class="'container">
+                <div class="row">
+                    <div class="col-md-5"> -->
+                        <!-- <div class="single-product-slider"> -->
+                            <!-- <div class="wears slide" data-ride="'wears" id="single-product-slider"> -->
+                                <!-- <div class="wears"> -->
+                                    <!-- <div class="wears-item active">
+                                        <img [src]="productData1.images[0].uri" alt="" class="img-fluid">                                
+        
+                                    </div>  -->
+                                    <!-- <ol class="carousel-indicator">
+                                        <li data-target="#single-product-slider" data-slide-to="0" class="active">
+                                            <img [src]="productData.product_image" alt="" class="img-fluid">
+                                        </li>
+        
+                                    </ol> -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    <!-- </div>
+                </div>
+            </div> -->
+        <!-- </section>  
+   
+        <p class="product-Brand">{{productData1.brands}} </p>
+    <h1 class="product-price">{{productData1.priceInfo.price}}</h1>
+    <p class="product-discription">{{productData1.description}}</p> -->
+ 
+<table class="table">
+    <tr >
+        <td>
+            <img [src]="productData1.images[0].uri" alt="-" class="img-fluid">
+        </td>                                       
+<td>
+    <strong class="product-Brand"> Brand: {{productData1.brands}} </strong>
+        <h1 class="product-price">Price: ${{productData1.priceInfo.price}}</h1>
+        <p class="product-discription">{{productData1.description}}</p>
+</td>   
+</tr>    
+</table>
+
+
+  

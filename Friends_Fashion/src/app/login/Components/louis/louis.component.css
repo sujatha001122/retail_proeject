@@ -1,0 +1,72 @@
+/* :host ::ng-deep .filter{
+    height:50%;
+    width: 40%;
+
+
+} */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.card-1 {
+    padding: 5px;
+    flex:10%;
+}
+
+.card-2 {
+    padding: 5px;
+    flex:50%;
+}
+h1{
+    color:black;
+}
+.filter-filters{
+    border-bottom: 1px  solid #e9e9ed;
+    padding-top:  20px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    /* border-right: 1px solid #e9e9ed;
+    border-left: 1px solid #e9e9ed;
+    border-top: 1px solid #e9e9ed; */
+}
+.categorie-filter{
+    text-transform: uppercase;
+    color:black;
+
+}
+.filter-search-inputbox{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 14px;
+    height: 100%;
+    width: 100%;
+}
+.top{
+    margin: auto;
+    max-height: 184px;
+    max-width: 224px;
+    border-image-outset:2rem;
+    /* border-radius: 45%; */
+} 
+.card{
+    padding: 15px;
+    
+}
+span{
+   
+    list-style-type:none;
+}
+
+.data {
+    padding: 5px 5px 10px 5px;
+    width: 280px;
+    height: 350px;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    margin: 2px 2px 10px 2px;
+    text-align: center;
+}
